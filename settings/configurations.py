@@ -6,7 +6,7 @@ class DefaultConfig:
     # openssl rand -hex 32
     SECRET_KEY = os.environ.get("SECRET_KEY")
     ALGORITHM = os.environ.get("ALGORITHM")
-    ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES"))
+    ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES", "10"))
 
     # MongoDB Cluter
     CLUSTER_USERNAME = os.environ.get("CLUSTER_USERNAME")
