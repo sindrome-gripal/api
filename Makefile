@@ -12,5 +12,5 @@ deploy:
 
 
 build-run:
-	sudo docker build -t works-api . && \
+	sudo docker build -t sindrome-gripal-api . && \
 	sudo docker run --restart=always --env-file=.env -p 8080:8080 works-api:latest 

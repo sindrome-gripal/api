@@ -5,3 +5,4 @@ passlib==1.7.4
 python-multipart==0.0.5
 pymongo==4.0
 pymongo[srv]
+requests

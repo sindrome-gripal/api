@@ -4,6 +4,7 @@ from .endpoints import auth
 from .endpoints import sign_up
 from .endpoints import reset_pwd
 from .endpoints import user
+from .endpoints import sindrome_gripal
 
 
 api_router = APIRouter()
@@ -31,5 +32,11 @@ api_router.include_router(
     router=user.router, 
     prefix="/user",
     tags=['User']
+)
+
+api_router.include_router(
+    router=sindrome_gripal.router, 
+    prefix="/sindrome-gripal",
+    tags=['Síndrome Gripal']
 )
 
