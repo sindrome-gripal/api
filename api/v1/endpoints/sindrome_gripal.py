@@ -13,8 +13,9 @@ config = DefaultConfig()
 
 
 
+# async def get_data(query: Query, _: User = Depends(get_current_active_user)):
 @router.post("/casos/", status_code=status.HTTP_200_OK)
-async def read_users_me(query: Query, _: User = Depends(get_current_active_user)):
+async def get_data(query: Query):
     
     es = ElasticHttpSearch()
     data, status_code = es.req(uf=query.uf, municipio=query.municipio)
